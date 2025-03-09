@@ -20,12 +20,6 @@ jobs:
           node-version: 20.x
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Test app
-        run: npm run test:unit
-
       - name: Display SoftUni Username
         run: echo "KraVeDra"
 
@@ -60,3 +54,6 @@ jobs:
         
       - name: Test the app
         run: npm run test:ui
+
+      - name: Test app
+        run: npm run test:unit

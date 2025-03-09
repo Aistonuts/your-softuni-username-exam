@@ -46,3 +46,12 @@ jobs:
       - name: Test the app
         run: npm run test:ui
 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
+      - name: Deploy to Render.com
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.RENDER_TOKEN }}

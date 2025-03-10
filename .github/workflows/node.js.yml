@@ -40,7 +40,6 @@ jobs:
     runs-on: ubuntu-latest  
     needs: deploy
     steps:
-      - name: Delay tests, so the app have time to deploy itself
       - name: Checkout Repository
         uses: actions/checkout@v3
       - name: Use Node.js

@@ -33,9 +33,8 @@ jobs:
       - name: Deploy to Render.com
         uses: johnbeynon/render-deploy-action@v0.0.8
         with:
-          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+           service-id: ${{ secrets.RENDER_SERVICE_ID }}
           api-key: ${{ secrets.RENDER_TOKEN }}
-
   tests:
     runs-on: ubuntu-latest  
     needs: deploy
